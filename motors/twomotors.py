@@ -4,9 +4,10 @@ from nxt.locator import find_one_brick
 from nxt.motor import *
 import threading, sys
 
-def turn_motor(motor, power, degrees):
+
+def turn_motor(m, power, degrees):
     try:
-        motor.turn(power, degrees)
+        m.turn(power, degrees)
     except Exception as e:
         sys.stdout.write(e)
 
